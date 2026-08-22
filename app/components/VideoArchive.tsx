@@ -1,13 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { videos, type VideoZone } from "../data";
+import { sourceLinks, videos, type VideoZone } from "../data";
 
 const filters: Array<VideoZone | "All"> = [
   "All",
-  "Lucid",
-  "Bloodline",
+  "New Signal",
+  "Lucid Dreams",
+  "Gate Keepers",
   "Error Sequence",
+  "Bloodline",
   "Archive",
 ];
 
@@ -24,7 +26,7 @@ export function VideoArchive() {
     <section className="content-room video-vault">
       <div className="room-title-row">
         <div>
-          <p className="section-kicker">Videos / organized archive</p>
+          <p className="section-kicker">Videos / official archive</p>
           <h2>{activeVideo.title}</h2>
         </div>
         <p>{activeVideo.note}</p>
@@ -60,7 +62,7 @@ export function VideoArchive() {
               >
                 <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt="" />
                 <span>
-                  <small>{String(index + 1).padStart(2, "0")} / {video.zone}</small>
+                  <small>{String(index + 1).padStart(2, "0")} / {video.zone} / {video.meta}</small>
                   <b>{video.title}</b>
                 </span>
               </button>
@@ -68,6 +70,9 @@ export function VideoArchive() {
           </div>
         </div>
       </div>
+      <a className="source-link" href={sourceLinks.videos}>
+        View official videos on YouTube
+      </a>
     </section>
   );
 }

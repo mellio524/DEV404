@@ -1,31 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { ReactNode } from "react";
 import { DreamShell } from "./components/DreamShell";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev-404.com"),
-  title: "DEV 404 - Lucid Dreams",
+  title: "DEV 404 - Official Music and Video Universe",
   description:
-    "Step into the dream of DEV 404: music videos, albums, and signal-fractured story worlds inspired by Lucid Dreams.",
+    "A trippy tech-thriller React site for DEV 404 with official albums, videos, artist information, and interactive depth-driven visuals.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "DEV 404 - Lucid Dreams",
+    title: "DEV 404 - Official Music and Video Universe",
     description:
-      "A surreal DEV 404 music hub where videos become rooms and albums become memories.",
+      "Enter the DEV 404 universe: official albums, videos, and cyberpunk digital art in an interactive thriller-styled site.",
     url: "https://dev-404.com",
     siteName: "DEV 404",
     images: [
@@ -33,15 +23,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "DEV 404 Lucid Dreams",
+        alt: "DEV 404",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DEV 404 - Lucid Dreams",
+    title: "DEV 404 - Official Music and Video Universe",
     description:
-      "Enter the dream of DEV 404 through music videos, albums, and signal-fractured rooms.",
+      "Official DEV 404 music releases, videos, and signal-fractured art.",
     images: ["/og.png"],
   },
 };
@@ -49,13 +39,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <DreamShell>{children}</DreamShell>
       </body>
     </html>

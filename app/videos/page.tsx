@@ -4,12 +4,13 @@ import { videos } from "../data";
 
 export default function VideosPage() {
   return (
-    <main className="dream-page">
+    <main className="dev-page">
       <RoomHero
-        eyebrow="Video room / official archive"
-        title="The videos are mirrors with doors behind them."
-        copy="Browse the newest Lucid Dreams visuals, Bloodline pieces, Error Sequence chapters, and the older archive from one organized room."
-        imageId={videos[0].id}
+        eyebrow="Videos / official channel archive"
+        title="Every video is filed like evidence from the dream."
+        copy="The player stays live while the archive wall sorts the official DEV 404 videos by signal type: new drops, lucid fragments, story episodes, bloodline cuts, and archive transmissions."
+        image="/dev404/lucid-crowd.png"
+        stat={`${videos.length} videos`}
       />
       <VideoArchive />
     </main>

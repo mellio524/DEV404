@@ -1,64 +1,48 @@
-import { RoomHero } from "./components/RoomHero";
-import { dreamStats, navRooms, videos } from "./data";
-import type { CSSProperties } from "react";
+import { DepthScene } from "./components/DepthScene";
+import { albums, sceneImages, videos } from "./data";
 
 export default function Home() {
   return (
-    <main className="dream-page home-room">
-      <RoomHero
-        eyebrow="DEV-404.com / lucid entry"
-        title="Step into the dream of DEV"
-        copy="The site is no longer a flat hub. It is a set of connected dream rooms: music, videos, comics, movies, and series, each entered through a door."
-      />
-      <section className="content-room home-index">
+    <main className="dev-page home-room">
+      <DepthScene />
+      <section className="content-room manifesto-grid">
         <div className="room-title-row">
           <div>
-            <p className="section-kicker">Dream map</p>
-            <h2>The same DEV universe, rebuilt as rooms.</h2>
+            <p className="section-kicker">DEV-404.com / official hub</p>
+            <h2>A cyberpunk music world built like a haunted machine.</h2>
           </div>
           <p>
-            DEV still stands at the center: a digital engineer, artist, and
-            techno-detective moving through signal, memory, code, and music.
+            DEV 404 lives between code, art, music, and thriller imagery. This
+            version treats the site like a set of rooms instead of a flat page:
+            images drift in the back, controls pull them forward, and every tab
+            stays locked to the red-tie signal.
           </p>
         </div>
-        <div className="portal-grid">
-          {navRooms.slice(1).map((room, index) => (
-            <a
-              className="portal-card"
-              href={room.href}
-              key={room.id}
-              style={{ "--portal-index": index } as CSSProperties}
-            >
-              <span>{room.subtitle}</span>
-              <b>{room.title}</b>
-            </a>
-          ))}
+        <div className="signal-stats">
+          <a href="/music">
+            <span>{albums.length}</span>
+            <b>official albums</b>
+          </a>
+          <a href="/videos">
+            <span>{videos.length}</span>
+            <b>official videos</b>
+          </a>
+          <a href="/about">
+            <span>{sceneImages.length}</span>
+            <b>visual fragments</b>
+          </a>
         </div>
       </section>
-      <section className="content-room signal-summary">
-        {dreamStats.map((stat) => (
-          <div className="stat-monolith" key={stat.label}>
-            <span>{stat.label}</span>
-            <b>{stat.value}</b>
-          </div>
+      <section className="content-room fracture-strip">
+        {sceneImages.slice(1, 7).map((image) => (
+          <article key={image.id}>
+            <img src={image.src} alt="" />
+            <div>
+              <span>{image.title}</span>
+              <p>{image.tone}</p>
+            </div>
+          </article>
         ))}
-      </section>
-      <section className="content-room latest-room">
-        <div className="room-title-row">
-          <div>
-            <p className="section-kicker">Latest signal</p>
-            <h2>{videos[0].title}</h2>
-          </div>
-          <p>{videos[0].note}</p>
-        </div>
-        <div className="hologram-player hero-video">
-          <iframe
-            title={videos[0].title}
-            src={`https://www.youtube.com/embed/${videos[0].id}`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
       </section>
     </main>
   );
