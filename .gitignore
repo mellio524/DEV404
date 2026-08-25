@@ -38,3 +38,36 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# Render frontend build output
+/Frontend/node_modules
+/Frontend/dist
+/Frontend/.next
+/Frontend/.vinext
+/Frontend/.wrangler
+/Frontend/outputs
+/Frontend/work
+
+# Local packaging and raw source media kept outside the deploy copy
+/.sites-package-stage-*/
+/dev404-site-*.tar.gz
+/BrokenCover.png
+/EvictionNoticeCover.png
+/GateKeepersCover.png
+/HelloWorldCover.png
+/LucidDreamsCover.png
+/MoviesLiesWarCover.png
+/WhatFamilyCover.png
+/HomeLoop2.mp4
+/InfoLoop2.mp4
+/MusicLoop2.mp4
+/VideoLoop2.mp4
+/about.png
+/home.png
+/music.png
+/video.png
+/home loop.mp4
+/info loop.mp4
+/info-loop.mp4
+/music loop.mp4
+/video llop.mp4
