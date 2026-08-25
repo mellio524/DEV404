@@ -4561,3 +4561,467 @@ iframe {
     width: 5.8rem;
   }
 }
+
+@media (max-width: 860px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .dev-shell {
+    overflow: visible;
+    perspective: none;
+  }
+
+  .world-perspective,
+  .page-plane {
+    min-height: auto;
+    perspective: none;
+    transform-style: flat;
+  }
+
+  .signal-sky,
+  .scan-field,
+  .far-depth {
+    opacity: 0.42;
+  }
+
+  .far-depth img {
+    width: clamp(8rem, 42vw, 15rem);
+    opacity: 0.08;
+  }
+
+  .dial-deck.top-deck {
+    top: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: min(37rem, calc(100vw - 0.75rem));
+  }
+
+  .dial-deck.top-deck::before,
+  .dial-deck.top-deck::after {
+    display: none;
+  }
+
+  .dial-deck .brand-lock {
+    display: none;
+  }
+
+  .dial-deck .door-nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-radius: 0;
+  }
+
+  .dial-deck .door-tab {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    min-height: 4rem;
+    padding: 0.25rem;
+    text-align: center;
+    transform: none;
+  }
+
+  .dial-deck .door-tab small,
+  .dial-deck .door-tab span {
+    padding-inline: 0;
+  }
+
+  .dial-deck .door-tab small {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0 auto 0.18rem;
+    font-size: 0.82rem;
+  }
+
+  .dial-deck .door-tab span {
+    padding-top: 0;
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 0.66rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dial-deck .door-tab:hover,
+  .dial-deck .door-tab:focus-visible,
+  .dial-deck .door-tab.active {
+    transform: none;
+  }
+
+  .ref-page {
+    min-height: 100svh;
+    overflow: visible;
+    padding: 0 0 1.5rem;
+  }
+
+  .page-loop-video {
+    position: fixed;
+    inset: 0;
+    height: 100svh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .ref-page::before {
+    background:
+      linear-gradient(180deg, rgba(1, 2, 4, 0.48), rgba(1, 2, 4, 0.7) 34%, rgba(1, 2, 4, 0.9)),
+      radial-gradient(circle at 50% 18%, rgba(103, 232, 255, 0.14), transparent 16rem);
+  }
+
+  .ref-page::after {
+    opacity: 0.5;
+  }
+
+  .cinema-copy,
+  .home-copy,
+  .about-copy {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    z-index: 6;
+    width: auto;
+    max-width: none;
+    padding: 6.8rem 1rem 1rem;
+    transform: none;
+  }
+
+  .cinema-copy h1,
+  .home-copy .static-title,
+  .about-copy h1 {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 14vw, 5rem);
+    line-height: 0.92;
+    overflow-wrap: anywhere;
+  }
+
+  .cinema-copy .ref-kicker {
+    max-width: 100%;
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .home-intro {
+    max-width: none;
+    max-height: none;
+    padding: 0.9rem 1rem;
+  }
+
+  .home-intro p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .redline-button {
+    min-height: 2.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-recommendations,
+  .about-stats,
+  .ref-music-stage,
+  .dream-theatre {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: auto;
+    max-width: none;
+    transform: none;
+  }
+
+  .home-recommendations {
+    margin: 0.25rem 1rem 1rem;
+    padding: 0.85rem;
+  }
+
+  .home-recommendations:hover {
+    transform: none;
+  }
+
+  .recommend-player {
+    aspect-ratio: 16 / 9;
+  }
+
+  .recommend-main,
+  .recommend-album {
+    min-height: 4.85rem;
+  }
+
+  .ref-music-stage,
+  .dream-theatre {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    perspective: none;
+  }
+
+  .ref-music-stage::before,
+  .ref-music-stage::after,
+  .dream-theatre::before,
+  .dream-theatre::after {
+    display: none;
+  }
+
+  .music-library-panel,
+  .music-player-panel,
+  .theatre-screen-panel,
+  .video-library-panel {
+    width: 100%;
+    min-width: 0;
+    transform: none;
+  }
+
+  .music-player-panel,
+  .theatre-screen-panel {
+    order: -1;
+  }
+
+  .music-section-head,
+  .music-player-topline,
+  .theatre-marquee,
+  .video-library-head {
+    min-height: auto;
+    gap: 0.65rem;
+  }
+
+  .music-section-head,
+  .music-player-topline,
+  .video-library-head {
+    align-items: start;
+  }
+
+  .music-section-head h2,
+  .music-player-identity h2,
+  .theatre-marquee h2,
+  .video-library-head h2 {
+    font-size: clamp(1.55rem, 9vw, 2.35rem);
+    line-height: 1;
+  }
+
+  .album-vault-grid,
+  .video-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .album-vault-card,
+  .album-vault-card img {
+    min-height: 11.6rem;
+  }
+
+  .music-player-identity {
+    grid-template-columns: minmax(5.5rem, 7rem) 1fr;
+  }
+
+  .music-player-identity img {
+    width: 100%;
+  }
+
+  .music-player-frame,
+  .theatre-screen {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+  }
+
+  .music-player-frame iframe,
+  .theatre-screen iframe {
+    min-height: 0;
+  }
+
+  .track-chip-grid {
+    justify-content: center;
+  }
+
+  .theatre-screen-panel {
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "marquee"
+      "screen"
+      "console";
+  }
+
+  .video-library-panel {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .theatre-marquee,
+  .video-library-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .theatre-console {
+    grid-template-columns: minmax(4.5rem, 0.32fr) 1fr minmax(4.5rem, 0.32fr);
+  }
+
+  .theatre-reel-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .theatre-video-card,
+  .theatre-video-card img {
+    min-height: 9.5rem;
+  }
+
+  .about-statement {
+    max-width: none;
+    max-height: none;
+    padding: 0.95rem;
+  }
+
+  .about-statement p {
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin: 0 1rem 1rem;
+    padding: 0.8rem;
+  }
+
+  .about-stats blockquote {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    z-index: 10;
+    width: calc(100vw - 2rem);
+    margin: 0.5rem auto 1rem;
+    transform: none;
+  }
+
+  .site-footer nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer a {
+    min-height: 2.45rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .dial-deck .door-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dial-deck .door-tab {
+    min-height: 3.25rem;
+    grid-template-columns: auto 1fr;
+    gap: 0.45rem;
+    padding-inline: 0.45rem;
+    place-items: center start;
+  }
+
+  .dial-deck .door-tab small {
+    width: 2.15rem;
+    height: 2.15rem;
+    margin: 0;
+    font-size: 0.72rem;
+  }
+
+  .dial-deck .door-tab span {
+    font-size: 0.64rem;
+    text-align: left;
+  }
+
+  .cinema-copy,
+  .home-copy,
+  .about-copy {
+    padding-top: 7.5rem;
+    padding-inline: 0.85rem;
+  }
+
+  .cinema-copy h1,
+  .home-copy .static-title,
+  .about-copy h1 {
+    font-size: clamp(2.25rem, 17vw, 4.35rem);
+  }
+
+  .home-intro {
+    padding: 0.8rem;
+  }
+
+  .home-recommendations,
+  .ref-music-stage,
+  .dream-theatre,
+  .about-stats {
+    margin-inline: 0.75rem;
+    padding-inline: 0.75rem;
+  }
+
+  .ref-music-stage,
+  .dream-theatre {
+    padding-inline: 0.75rem;
+  }
+
+  .recommend-mode,
+  .music-player-controls,
+  .theatre-console {
+    grid-template-columns: 1fr;
+  }
+
+  .recommend-main,
+  .recommend-album {
+    grid-template-columns: 5rem 1fr;
+  }
+
+  .recommend-main img,
+  .recommend-album img {
+    width: 5rem;
+  }
+
+  .music-player-identity {
+    grid-template-columns: 1fr;
+  }
+
+  .music-player-identity img {
+    width: min(11rem, 100%);
+  }
+
+  .album-vault-grid,
+  .video-library-grid,
+  .about-stats,
+  .site-footer nav {
+    grid-template-columns: 1fr;
+  }
+
+  .album-vault-card,
+  .album-vault-card img {
+    min-height: 13.25rem;
+  }
+
+  .theatre-reel-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .theatre-reel-strip button,
+  .theatre-reel-strip img {
+    min-height: 6.8rem;
+  }
+
+  .theatre-video-card,
+  .theatre-video-card img {
+    min-height: 11rem;
+  }
+
+  .about-stats blockquote {
+    grid-column: auto;
+  }
+}
