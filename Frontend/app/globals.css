@@ -4563,6 +4563,11 @@ iframe {
 }
 
 @media (max-width: 860px) {
+  :root {
+    --mobile-nav-height: 4.9rem;
+    --mobile-nav-top: calc(0.45rem + env(safe-area-inset-top, 0px));
+  }
+
   html,
   body {
     overflow-x: hidden;
@@ -4592,10 +4597,27 @@ iframe {
   }
 
   .dial-deck.top-deck {
-    top: 0.5rem;
+    position: fixed;
+    top: var(--mobile-nav-top);
+    left: 0.5rem;
+    right: 0.5rem;
     grid-template-columns: 1fr;
     gap: 0;
-    width: min(37rem, calc(100vw - 0.75rem));
+    width: auto;
+    min-height: var(--mobile-nav-height);
+    padding: 0.36rem;
+    clip-path: none;
+    border-color: rgba(103, 232, 255, 0.22);
+    border-radius: 0.7rem;
+    background:
+      linear-gradient(180deg, rgba(11, 17, 26, 0.96), rgba(3, 5, 9, 0.94)),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 0.9rem);
+    transform: none;
+    box-shadow:
+      0 0.8rem 1.8rem rgba(0, 0, 0, 0.48),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.055),
+      inset 0 0 1.6rem rgba(255, 47, 63, 0.06);
+    will-change: auto;
   }
 
   .dial-deck.top-deck::before,
@@ -4609,6 +4631,7 @@ iframe {
 
   .dial-deck .door-nav {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.24rem;
     border-radius: 0;
   }
 
@@ -4618,8 +4641,13 @@ iframe {
     min-width: 0;
     min-height: 4rem;
     padding: 0.25rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0.45rem;
+    background: rgba(255, 255, 255, 0.025);
     text-align: center;
     transform: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .dial-deck .door-tab small,
@@ -4628,10 +4656,10 @@ iframe {
   }
 
   .dial-deck .door-tab small {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.42rem;
+    height: 2.42rem;
     margin: 0 auto 0.18rem;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .dial-deck .door-tab span {
@@ -4646,6 +4674,7 @@ iframe {
   .dial-deck .door-tab:hover,
   .dial-deck .door-tab:focus-visible,
   .dial-deck .door-tab.active {
+    background: rgba(255, 47, 63, 0.08);
     transform: none;
   }
 
@@ -4683,7 +4712,7 @@ iframe {
     z-index: 6;
     width: auto;
     max-width: none;
-    padding: 6.8rem 1rem 1rem;
+    padding: calc(var(--mobile-nav-height) + var(--mobile-nav-top) + 1.15rem) 1rem 1rem;
     transform: none;
   }
 
@@ -4917,6 +4946,17 @@ iframe {
 }
 
 @media (max-width: 520px) {
+  :root {
+    --mobile-nav-height: 7.25rem;
+  }
+
+  .dial-deck.top-deck {
+    left: 0.45rem;
+    right: 0.45rem;
+    padding: 0.32rem;
+    border-radius: 0.62rem;
+  }
+
   .dial-deck .door-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4944,7 +4984,7 @@ iframe {
   .cinema-copy,
   .home-copy,
   .about-copy {
-    padding-top: 7.5rem;
+    padding-top: calc(var(--mobile-nav-height) + var(--mobile-nav-top) + 1rem);
     padding-inline: 0.85rem;
   }
 

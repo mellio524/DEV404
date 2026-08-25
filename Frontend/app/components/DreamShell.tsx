@@ -36,10 +36,12 @@ export function DreamShell({ children }: DreamShellProps) {
       return;
     }
 
+    window.history.scrollRestoration = "manual";
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     setTarget(title);
     setPhase("closing");
     window.setTimeout(() => {
-      window.location.href = href;
+      window.location.assign(href);
     }, 430);
   }
 
