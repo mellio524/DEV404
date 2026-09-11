@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import { PageLoopVideo } from "../components/PageLoopVideo";
 import { sourceLinks } from "../data";
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function DevpoolPage() {
       className="ref-page devpool-page"
       style={{ "--page-bg": "url('/dev404/devpool-background.png')" } as CSSProperties}
     >
+      <PageLoopVideo poster="/dev404/devpool-background.png" src="/dev404/devpool-loop.mp4" />
       <section className="devpool-hero">
         <div className="devpool-copy">
           <p className="ref-kicker">Hero loading... probably.</p>

@@ -106,6 +106,14 @@ export const albums: Album[] = [
     image: "/dev404/devpool-background.png",
   },
   {
+    title: "The Living Haunting",
+    id: "OLAK5uy_lm2LKy7xWtrq2I43N9qonMB6IXYNDTc3A",
+    tracks: "official album",
+    era: "Rock opera",
+    note: "A haunted rock-opera release where rooms remember, voices echo, and the DEV 404 signal keeps moving through the walls.",
+    image: "https://i.ytimg.com/vi/3h-t3bJQZKI/hqdefault.jpg",
+  },
+  {
     title: "Gate Keepers",
     id: "OLAK5uy_miz4J2_gqMMhFXhapXzD3OHN1mEWd-WaY",
     tracks: "4 tracks",
