@@ -1531,7 +1531,7 @@ iframe {
 
 /* Reference-driven DEV 404 page treatment */
 .dial-deck.top-deck {
-  top: 0.45rem;
+  top: calc(1rem + env(safe-area-inset-top, 0px));
   grid-template-columns: minmax(12.5rem, 18rem) 1fr;
   gap: 0;
   width: min(99rem, calc(100vw - 0.9rem));
@@ -1546,6 +1546,7 @@ iframe {
     inset 0 -0.1rem 0 rgba(0, 0, 0, 0.8),
     0 0.9rem 2.5rem rgba(0, 0, 0, 0.58);
   clip-path: polygon(1.2% 0, 98.8% 0, 100% 50%, 98.8% 100%, 1.2% 100%, 0 50%);
+  transform: translateX(-50%);
 }
 
 .dial-deck.top-deck::before,
@@ -5098,6 +5099,9 @@ iframe {
 .devpool-page .page-loop-video {
   position: fixed;
   height: 100svh;
+  background: #030407;
+  object-fit: contain;
+  object-position: center top;
   opacity: 1;
   filter: saturate(1.08) contrast(1.05) brightness(0.95);
 }
@@ -5112,24 +5116,27 @@ iframe {
   width: min(93rem, calc(100% - 3rem));
   min-height: 44rem;
   margin: 0 auto;
-  padding: 8rem 0 3rem;
+  padding: 10rem 0 3rem;
 }
 
 .devpool-copy {
-  max-width: 34rem;
+  max-width: 37rem;
   padding: 1.2rem;
   border-left: 2px solid rgba(255, 31, 31, 0.78);
   background: linear-gradient(90deg, rgba(1, 2, 4, 0.86), rgba(1, 2, 4, 0.12));
   text-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.8);
+  overflow: visible;
 }
 
 .devpool-copy h1 {
   margin: 0.25rem 0 0.7rem;
   color: #f3f0e9;
-  font-size: clamp(3.7rem, 8vw, 8rem);
+  max-width: 100%;
+  overflow: visible;
+  font-size: clamp(3.6rem, 5.8vw, 6.45rem);
   font-weight: 950;
   line-height: 0.82;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   text-shadow:
     0.16rem 0.16rem 0 #08090b,
     0.32rem 0.32rem 0 rgba(255, 26, 26, 0.9),
