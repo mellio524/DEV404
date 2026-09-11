@@ -1,4 +1,4 @@
-export type DoorId = "home" | "music" | "videos" | "about";
+export type DoorId = "home" | "music" | "videos" | "devpool" | "studios" | "about";
 
 export type NavRoom = {
   id: DoorId;
@@ -25,6 +25,9 @@ export type Album = {
 
 export type VideoZone =
   | "New Signal"
+  | "DEVPOOL"
+  | "Rock Opera"
+  | "DEV Studios"
   | "Lucid Dreams"
   | "Gate Keepers"
   | "Error Sequence"
@@ -43,6 +46,8 @@ export const navRooms: NavRoom[] = [
   { id: "home", title: "Home", href: "/", subtitle: "Signal entry" },
   { id: "music", title: "Music", href: "/music", subtitle: "Official albums" },
   { id: "videos", title: "Videos", href: "/videos", subtitle: "Visual archive" },
+  { id: "devpool", title: "DEVPOOL", href: "/devpool", subtitle: "Hero glitch" },
+  { id: "studios", title: "Studios", href: "/studios", subtitle: "Film theatre" },
   { id: "about", title: "About", href: "/about", subtitle: "DEV file" },
 ];
 
@@ -92,6 +97,14 @@ export const sceneImages: SceneImage[] = [
 ];
 
 export const albums: Album[] = [
+  {
+    title: "DEVPOOL",
+    id: "OLAK5uy_mfrNbtqU2W6_NIsLHS2WLuPh16uB0oZxM",
+    tracks: "official album",
+    era: "Hero loading",
+    note: "The DEVPOOL soundtrack lane: playful chaos, survival code, and red-black comic-book voltage.",
+    image: "/dev404/devpool-background.png",
+  },
   {
     title: "Gate Keepers",
     id: "OLAK5uy_miz4J2_gqMMhFXhapXzD3OHN1mEWd-WaY",
@@ -191,6 +204,10 @@ export const albums: Album[] = [
 ];
 
 export const videos: Video[] = [
+  { id: "QaKdzmtIwz0", title: "DEVPOOL", zone: "DEVPOOL", meta: "new", note: "The hero glitch lands with alien chaos, jokes in the margins, and survival mode turned all the way up." },
+  { id: "nMTaEeW0few", title: "Tethered (Official Movie Trailer)", zone: "DEV Studios", meta: "coming November", note: "The first DEV Studios film signal, built around a clock, a bond, and a timeline that refuses to let go." },
+  { id: "3h-t3bJQZKI", title: "THE LIVING HAUNTING", zone: "Rock Opera", meta: "new", note: "A rock-opera chapter where the room remembers before the singer does." },
+  { id: "jbSdE2jeKxY", title: "THE VEIL", zone: "Rock Opera", meta: "new", note: "A new DEV 404 music video and rock-opera signal from behind the curtain." },
   { id: "DGX8xh6zOVc", title: "GateKeepers", zone: "New Signal", meta: "14 hours ago", note: "The newest official transmission opens the gate." },
   { id: "S-YtBZ19jqE", title: "LUCID DREAMS", zone: "Lucid Dreams", meta: "5 days ago", note: "The dream room becomes the main breach." },
   { id: "jdoeXD9jZ3g", title: "Blood Isn't BluePrint", zone: "Bloodline", meta: "2 months ago", note: "Inheritance turns into damaged code." },
@@ -236,4 +253,7 @@ export const sourceLinks = {
   videos: "https://www.youtube.com/@DEV_Music_404/videos",
   releases: "https://www.youtube.com/@DEV_Music_404/releases",
   home: "https://dev-404.com/",
+  devpoolVideo: "https://youtu.be/QaKdzmtIwz0",
+  devpoolAlbum: "https://youtube.com/playlist?list=OLAK5uy_mfrNbtqU2W6_NIsLHS2WLuPh16uB0oZxM",
+  tetheredTrailer: "https://youtu.be/nMTaEeW0few",
 };

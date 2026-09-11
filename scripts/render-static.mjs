@@ -12,6 +12,8 @@ const routes = [
   ["/", "index.html"],
   ["/music", "music/index.html"],
   ["/videos", "videos/index.html"],
+  ["/devpool", "devpool/index.html"],
+  ["/studios", "studios/index.html"],
   ["/about", "about/index.html"],
 ];
 
@@ -102,7 +104,13 @@ for (const [route, outputName] of routes) {
 
 await writeFile(
   path.join(distDir, "_redirects"),
-  ["/music /music/index.html 200", "/videos /videos/index.html 200", "/about /about/index.html 200"].join("\n") +
+  [
+    "/music /music/index.html 200",
+    "/videos /videos/index.html 200",
+    "/devpool /devpool/index.html 200",
+    "/studios /studios/index.html 200",
+    "/about /about/index.html 200",
+  ].join("\n") +
     "\n",
   "utf8",
 );
