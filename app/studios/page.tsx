@@ -77,6 +77,17 @@ export default function StudiosPage() {
               The TETHERED soundtrack carries the clockwork emotion of the film: gold light, dark streets, memory,
               distance, and the pulse of something still connected.
             </p>
+            <a href={sourceLinks.tetheredSoundtrack} target="_blank" rel="noreferrer">
+              Open soundtrack
+            </a>
+          </div>
+          <div className="studio-soundtrack-player">
+            <iframe
+              title="TETHERED original motion picture soundtrack"
+              src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kWC7LXZSiiovtix3XYkEI8RMldVKVp2Cs"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </section>
       </section>

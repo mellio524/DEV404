@@ -41,6 +41,21 @@ const stickers = [
   { label: "DEVPOOL duplicate", x: "100%", y: "100%" },
 ];
 
+const devpoolEpisodes = [
+  {
+    number: "02",
+    title: "DEVPOOL Episode 2",
+    id: "n2XY4DputvU",
+    href: sourceLinks.devpoolEpisode2,
+  },
+  {
+    number: "03",
+    title: "DEVPOOL Episode 3",
+    id: "j-IHuASxKS4",
+    href: sourceLinks.devpoolEpisode3,
+  },
+];
+
 export default function DevpoolPage() {
   return (
     <main
@@ -84,6 +99,34 @@ export default function DevpoolPage() {
               allowFullScreen
             />
           </div>
+        </div>
+      </section>
+
+      <section className="devpool-episode-vault" aria-label="DEVPOOL episode vault">
+        <div className="devpool-vault-head">
+          <p className="ref-kicker">New dispatches</p>
+          <h2>Episode Vault</h2>
+        </div>
+        <div className="devpool-episode-grid">
+          {devpoolEpisodes.map((episode) => (
+            <article className="devpool-episode-card" key={episode.id}>
+              <div className="devpool-episode-screen">
+                <iframe
+                  title={episode.title}
+                  src={`https://www.youtube.com/embed/${episode.id}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="devpool-episode-copy">
+                <span>Episode {episode.number}</span>
+                <h3>{episode.title}</h3>
+                <a href={episode.href} target="_blank" rel="noreferrer">
+                  Open signal
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

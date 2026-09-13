@@ -213,6 +213,8 @@ export const albums: Album[] = [
 
 export const videos: Video[] = [
   { id: "QaKdzmtIwz0", title: "DEVPOOL", zone: "DEVPOOL", meta: "new", note: "The hero glitch lands with alien chaos, jokes in the margins, and survival mode turned all the way up." },
+  { id: "n2XY4DputvU", title: "DEVPOOL Episode 2", zone: "DEVPOOL", meta: "new", note: "The second DEVPOOL dispatch keeps the comic-book chaos moving through the red-black signal." },
+  { id: "j-IHuASxKS4", title: "DEVPOOL Episode 3", zone: "DEVPOOL", meta: "new", note: "The third DEVPOOL episode pushes the hero-glitch world deeper into the joke, the blast radius, and the mask." },
   { id: "nMTaEeW0few", title: "Tethered (Official Movie Trailer)", zone: "DEV Studios", meta: "coming November", note: "The first DEV Studios film signal, built around a clock, a bond, and a timeline that refuses to let go." },
   { id: "3h-t3bJQZKI", title: "THE LIVING HAUNTING", zone: "Rock Opera", meta: "new", note: "A rock-opera chapter where the room remembers before the singer does." },
   { id: "jbSdE2jeKxY", title: "THE VEIL", zone: "Rock Opera", meta: "new", note: "A new DEV 404 music video and rock-opera signal from behind the curtain." },
@@ -262,6 +264,9 @@ export const sourceLinks = {
   releases: "https://www.youtube.com/@DEV_Music_404/releases",
   home: "https://dev-404.com/",
   devpoolVideo: "https://youtu.be/QaKdzmtIwz0",
+  devpoolEpisode2: "https://youtu.be/n2XY4DputvU",
+  devpoolEpisode3: "https://youtu.be/j-IHuASxKS4",
   devpoolAlbum: "https://youtube.com/playlist?list=OLAK5uy_mfrNbtqU2W6_NIsLHS2WLuPh16uB0oZxM",
   tetheredTrailer: "https://youtu.be/nMTaEeW0few",
+  tetheredSoundtrack: "https://music.youtube.com/playlist?list=OLAK5uy_kWC7LXZSiiovtix3XYkEI8RMldVKVp2Cs",
 };
