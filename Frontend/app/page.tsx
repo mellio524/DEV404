@@ -144,6 +144,15 @@ export default function Home() {
         <a className="redline-button" href="/music">Enter the loop</a>
       </section>
       <HomeRecommendations />
+      <section className="home-aurelia-card" aria-label="Featured Aurelia signal">
+        <img src="/dev404/aurelia-place-between.png" alt="AURELIA - The Place Between" />
+        <div>
+          <p>New artist signal</p>
+          <h2>AURELIA</h2>
+          <span>The Place Between opens a purple channel into DEV Studios.</span>
+          <a href="/aurelia">Enter Aurelia</a>
+        </div>
+      </section>
     </main>
   );
 }

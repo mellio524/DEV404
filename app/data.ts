@@ -1,4 +1,4 @@
-export type DoorId = "home" | "music" | "videos" | "devpool" | "studios" | "about";
+export type DoorId = "home" | "music" | "videos" | "devpool" | "studios" | "aurelia" | "about";
 
 export type NavRoom = {
   id: DoorId;
@@ -26,6 +26,7 @@ export type Album = {
 export type VideoZone =
   | "New Signal"
   | "DEVPOOL"
+  | "Aurelia"
   | "Rock Opera"
   | "DEV Studios"
   | "Lucid Dreams"
@@ -48,6 +49,7 @@ export const navRooms: NavRoom[] = [
   { id: "videos", title: "Videos", href: "/videos", subtitle: "Visual archive" },
   { id: "devpool", title: "DEVPOOL", href: "/devpool", subtitle: "Hero glitch" },
   { id: "studios", title: "Studios", href: "/studios", subtitle: "Film theatre" },
+  { id: "aurelia", title: "Aurelia", href: "/aurelia", subtitle: "Artist file" },
   { id: "about", title: "About", href: "/about", subtitle: "DEV file" },
 ];
 

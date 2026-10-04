@@ -22,6 +22,7 @@ const socialLinks = [
 
 export function DreamShell({ children }: DreamShellProps) {
   const pathname = usePathname();
+  const currentPath = pathname === "/" ? pathname : pathname.replace(/\/$/, "");
   const [phase, setPhase] = useState<"idle" | "closing" | "opening">("opening");
   const [target, setTarget] = useState("DEV 404");
 
@@ -32,7 +33,7 @@ export function DreamShell({ children }: DreamShellProps) {
   }, [pathname]);
 
   function enterRoom(href: string, title: string) {
-    if (href === pathname || phase === "closing") {
+    if (href === currentPath || phase === "closing") {
       return;
     }
 
@@ -71,7 +72,7 @@ export function DreamShell({ children }: DreamShellProps) {
           {navRooms.map((room, index) => (
             <button
               key={room.id}
-              className={pathname === room.href ? "door-tab active" : "door-tab"}
+              className={currentPath === room.href ? "door-tab active" : "door-tab"}
               onClick={() => enterRoom(room.href, room.title)}
               style={{ "--door-index": index } as CSSProperties}
             >

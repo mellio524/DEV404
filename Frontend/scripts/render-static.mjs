@@ -14,6 +14,7 @@ const routes = [
   ["/videos", "videos/index.html"],
   ["/devpool", "devpool/index.html"],
   ["/studios", "studios/index.html"],
+  ["/aurelia", "aurelia/index.html"],
   ["/about", "about/index.html"],
 ];
 
@@ -109,6 +110,7 @@ await writeFile(
     "/videos /videos/index.html 200",
     "/devpool /devpool/index.html 200",
     "/studios /studios/index.html 200",
+    "/aurelia /aurelia/index.html 200",
     "/about /about/index.html 200",
   ].join("\n") +
     "\n",
