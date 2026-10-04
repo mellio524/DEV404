@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { HomeRecommendations } from "./components/HomeRecommendations";
 import { PageLoopVideo } from "./components/PageLoopVideo";
+import { sourceLinks } from "./data";
 
 const siteUrl = "https://dev-404.com";
 
@@ -145,11 +146,19 @@ export default function Home() {
       </section>
       <HomeRecommendations />
       <section className="home-aurelia-card" aria-label="Featured Aurelia signal">
-        <img src="/dev404/aurelia-place-between.png" alt="AURELIA - The Place Between" />
-        <div>
+        <div className="home-aurelia-frame">
+          <iframe
+            title="AURELIA - The Place Between"
+            src="https://www.youtube.com/embed/ZtORD9vtNhc"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div className="home-aurelia-copy">
           <p>New artist signal</p>
           <h2>AURELIA</h2>
           <span>The Place Between opens a purple channel into DEV Studios.</span>
+          <a href={sourceLinks.aureliaVideo} target="_blank" rel="noreferrer">Watch video</a>
           <a href="/aurelia">Enter Aurelia</a>
         </div>
       </section>

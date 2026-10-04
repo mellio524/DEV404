@@ -54,6 +54,30 @@ const devpoolEpisodes = [
     id: "j-IHuASxKS4",
     href: sourceLinks.devpoolEpisode3,
   },
+  {
+    number: "04",
+    title: "DEVPOOL: No Refunds",
+    id: "AkH11AdWw1o",
+    href: sourceLinks.devpoolEpisode4,
+  },
+  {
+    number: "05",
+    title: "DEVPOOL: Run It Local",
+    id: "mUoWE-sbFgc",
+    href: sourceLinks.devpoolEpisode5,
+  },
+  {
+    number: "06",
+    title: "DEVPOOL: The Puppet Master",
+    id: "uyKSeeh2lZU",
+    href: sourceLinks.devpoolEpisode6,
+  },
+  {
+    number: "07",
+    title: "DEVPOOL: Resonance",
+    id: "Vg8Pa9TByH8",
+    href: sourceLinks.devpoolEpisode7,
+  },
 ];
 
 export default function DevpoolPage() {

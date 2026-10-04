@@ -2087,9 +2087,9 @@ iframe {
   left: clamp(1rem, 5vw, 4.4rem);
   bottom: clamp(4.2rem, 7vh, 5.4rem);
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 12rem 1fr;
   gap: 0.8rem;
-  width: min(30rem, 42vw);
+  width: min(36rem, 45vw);
   padding: 0.65rem;
   border: 1px solid rgba(187, 89, 255, 0.42);
   background:
@@ -2118,7 +2118,25 @@ iframe {
   filter: saturate(1.12) contrast(1.05);
 }
 
-.home-aurelia-card div {
+.home-aurelia-frame {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 6.8rem;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(235, 232, 224, 0.14);
+  background: #030208;
+}
+
+.home-aurelia-frame iframe,
+.aurelia-video-shell iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.home-aurelia-copy {
   position: relative;
   z-index: 1;
   display: flex;
@@ -2161,7 +2179,7 @@ iframe {
 
 .home-aurelia-card a {
   align-self: start;
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   padding: 0.5rem 0.68rem;
   border: 1px solid rgba(187, 89, 255, 0.64);
   color: #f7efff;
@@ -4875,7 +4893,7 @@ iframe {
   }
 
   .home-aurelia-card {
-    grid-template-columns: 7.2rem 1fr;
+    grid-template-columns: minmax(10rem, 12rem) 1fr;
     margin: 0.25rem 1rem 1rem;
     width: auto;
     transform: none;

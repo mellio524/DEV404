@@ -214,9 +214,16 @@ export const albums: Album[] = [
 ];
 
 export const videos: Video[] = [
+  { id: "ZtORD9vtNhc", title: "AURELIA - The Place Between", zone: "Aurelia", meta: "new", note: "A purple DEV Studios signal where code, poetry, music, and story meet in the space between." },
+  { id: "FoMBCPYl_XM", title: "Rivers Run Backwards", zone: "New Signal", meta: "new", note: "A new DEV 404 signal pulling time, memory, and motion against the current." },
+  { id: "ANAgm2nXBrA", title: "Knock Knock", zone: "New Signal", meta: "new", note: "A darker DEV 404 transmission at the door, built like a warning that learned the rhythm." },
   { id: "QaKdzmtIwz0", title: "DEVPOOL", zone: "DEVPOOL", meta: "new", note: "The hero glitch lands with alien chaos, jokes in the margins, and survival mode turned all the way up." },
   { id: "n2XY4DputvU", title: "DEVPOOL Episode 2", zone: "DEVPOOL", meta: "new", note: "The second DEVPOOL dispatch keeps the comic-book chaos moving through the red-black signal." },
   { id: "j-IHuASxKS4", title: "DEVPOOL Episode 3", zone: "DEVPOOL", meta: "new", note: "The third DEVPOOL episode pushes the hero-glitch world deeper into the joke, the blast radius, and the mask." },
+  { id: "AkH11AdWw1o", title: "DEVPOOL: No Refunds", zone: "DEVPOOL", meta: "new", note: "Musical comedy chaos from the DEVPOOL side of the signal, where the joke comes with a blast radius." },
+  { id: "mUoWE-sbFgc", title: "DEVPOOL: Run It Local", zone: "DEVPOOL", meta: "new", note: "DEVPOOL keeps the code close, the jokes loud, and the red-black world running hot." },
+  { id: "uyKSeeh2lZU", title: "DEVPOOL: The Puppet Master", zone: "DEVPOOL", meta: "new", note: "A new masked dispatch pulling strings inside the comic-book glitch zone." },
+  { id: "Vg8Pa9TByH8", title: "DEVPOOL: Resonance", zone: "DEVPOOL", meta: "new", note: "The DEVPOOL signal hits back with red eyes, broken rhythm, and strange heroic feedback." },
   { id: "nMTaEeW0few", title: "Tethered (Official Movie Trailer)", zone: "DEV Studios", meta: "coming November", note: "The first DEV Studios film signal, built around a clock, a bond, and a timeline that refuses to let go." },
   { id: "3h-t3bJQZKI", title: "THE LIVING HAUNTING", zone: "Rock Opera", meta: "new", note: "A rock-opera chapter where the room remembers before the singer does." },
   { id: "jbSdE2jeKxY", title: "THE VEIL", zone: "Rock Opera", meta: "new", note: "A new DEV 404 music video and rock-opera signal from behind the curtain." },
@@ -268,7 +275,12 @@ export const sourceLinks = {
   devpoolVideo: "https://youtu.be/QaKdzmtIwz0",
   devpoolEpisode2: "https://youtu.be/n2XY4DputvU",
   devpoolEpisode3: "https://youtu.be/j-IHuASxKS4",
+  devpoolEpisode4: "https://youtu.be/AkH11AdWw1o",
+  devpoolEpisode5: "https://youtu.be/mUoWE-sbFgc",
+  devpoolEpisode6: "https://youtu.be/uyKSeeh2lZU",
+  devpoolEpisode7: "https://youtu.be/Vg8Pa9TByH8",
   devpoolAlbum: "https://youtube.com/playlist?list=OLAK5uy_mfrNbtqU2W6_NIsLHS2WLuPh16uB0oZxM",
+  aureliaVideo: "https://youtu.be/ZtORD9vtNhc",
   tetheredTrailer: "https://youtu.be/nMTaEeW0few",
   tetheredSoundtrack: "https://music.youtube.com/playlist?list=OLAK5uy_kWC7LXZSiiovtix3XYkEI8RMldVKVp2Cs",
 };

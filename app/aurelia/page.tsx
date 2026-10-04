@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import { sourceLinks } from "../data";
 
 const siteUrl = "https://dev-404.com";
 
@@ -94,7 +95,12 @@ export default function AureliaPage() {
 
       <section className="aurelia-feature" aria-label="Featured AURELIA video">
         <div className="aurelia-video-shell">
-          <img src="/dev404/aurelia-place-between.png" alt="AURELIA The Place Between featured artwork" />
+          <iframe
+            title="AURELIA - The Place Between"
+            src="https://www.youtube.com/embed/ZtORD9vtNhc"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
         <div className="aurelia-feature-copy">
           <p className="ref-kicker">Featured video</p>
@@ -103,7 +109,9 @@ export default function AureliaPage() {
             A new doorway in the DEV Studios archive, built from purple light, digital dream logic,
             and the pull between code, memory, and imagination.
           </p>
-          <a href="/videos">Open the video archive</a>
+          <a href={sourceLinks.aureliaVideo} target="_blank" rel="noreferrer">
+            Watch on YouTube
+          </a>
         </div>
       </section>
     </main>
